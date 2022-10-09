@@ -7,7 +7,7 @@ class Atm:
         self.pin = " "
         self.balance = 0
 
-    Self.menu()     # Calling of menu method comes to function when we create obj of Atm
+        self.menu()     # Calling of menu method comes to function when we create obj of Atm
 
     # Menu method Created 
 
@@ -44,7 +44,7 @@ class Atm:
     def create_pin(self):
         self.pin = input("Enter Your Pin :")
         print("Pin Set Successfully")      
-
+        self.menu()
 
     def deposit(self):
         temp = input("Enter Your pin : ")
@@ -54,7 +54,7 @@ class Atm:
             print("Deposit Successful")
         else:
             print("Invalid Pin")
-    
+        self.menu()
 
     def withdraw(self):
         temp = input("Enter Your pin : ")
@@ -67,7 +67,7 @@ class Atm:
                 print("Insufficient Fund")    
         else:
             print("Invalid Pin")
-
+        self.menu()
 
     def check_bal(self):
         temp = input("Enter Your pin : ")
@@ -75,5 +75,8 @@ class Atm:
             print("Available Balance : ",self.balance)
         else:
             print("Invalid Pin")
+        self.menu()
 
-   
+
+# object of Atm Created
+sbi = Atm()
